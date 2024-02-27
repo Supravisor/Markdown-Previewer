@@ -1,4 +1,19 @@
 body {
-  height: 100vh;
-  width: 100wh;
+  background: Crimson;
+  margin-left: 26vw;
+}
+
+#editor {
+  background: Grey;
+  padding: 0px;
+}
+
+#preview {
+  background: Coral;
+}
+
+#preview, #editor {
+  display: inline-block;
+  height: 60vh;
+  width: 40%;
 }
