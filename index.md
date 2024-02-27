@@ -17,7 +17,13 @@
 
 <body>
 
+<div>
+  <textarea id="editor">
+  </textarea>
+  <div id="preview"></div>
+</div>
 
+<article id="test"></article>
   <script src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js'></script>
   <script  src="./script.js"></script>
 
