@@ -20,8 +20,10 @@
 <div>
   <textarea id="editor">
   </textarea>
-  <div id="preview"></div>
 </div>
+
+<div id="preview"></div>
+
 
 <article id="test"></article>
   <script src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js'></script>
