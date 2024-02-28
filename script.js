@@ -28,7 +28,7 @@ class Input extends React.Component {
   }
 };
 
-
+// Test this
 const Output = (props) => <div>
     <h4>Controlled Input:</h4>
         <p>{props.output}</p>     
