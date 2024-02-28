@@ -18,8 +18,7 @@
 <body>
 
 <div>
-  <textarea id="editor">
-  </textarea>
+  <textarea id="editor"></textarea>
 </div>
 
 <div id="preview"></div>
