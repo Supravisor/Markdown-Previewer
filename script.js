@@ -64,3 +64,4 @@ const JSX = (
 );
 
 ReactDOM.render(<Input />, document.getElementById('editor'));
+ReactDOM.render(JSX, document.getElementById('test'));
