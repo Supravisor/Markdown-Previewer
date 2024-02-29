@@ -6,64 +6,72 @@ class Input extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      input: ''
+      markdown: ""
     };
     // Change code below this line
-    this.handleChange = this.handleChange.bind(this)
+    
     // Change code above this line
   }
+  
   // Change code below this line
-    handleChange (event) {
-    this.setState({
-      input: event.target.value
-    });
+  updateMarkdown(markdown) {
+    this.setState({markdown});
   }
 
   // Change code above this line
   render() {
     return (
       <div>
-      <textarea value = {this.state.input} onChange = {this.handleChange} ></textarea>
-  <Output output={this.state.input} />
+        <textarea
+          value={this.state.markdown}
+          onChange={(e) => { this.updateMarkdown(e.target.value);
+          }}
+        >
+          {console.log(this.state.markdown)}
+        </textarea>
+        <div dangerouslySetInnerHTML = {{ __html: (this.state.markdown) }}>
+        </div>
+        <Output  />
       </div>
     );
   }
-};
+}
 
-// Test this
-const Output = (props) => <div>
+const Output = (props) => (
+  <div>
     <h4>Controlled Input:</h4>
-        <p>{props.output}</p>     
-      </div>;
+    <div>{props.output}</div>
+  </div>
+);
 
-
-  const randomColor = () => {
-    const hexadecimalNumbers = '0123456789ABCDEF';
-    let colour = '#';
-    for (let i = 0; i < 6; i++) {
-      colour += hexadecimalNumbers[Math.floor(Math.random() * 16)];
-    }
-    return colour;
-  };
+const randomColor = () => {
+  const hexadecimalNumbers = "0123456789ABCDEF";
+  let colour = "#";
+  for (let i = 0; i < 6; i++) {
+    colour += hexadecimalNumbers[Math.floor(Math.random() * 16)];
+  }
+  return colour;
+};
 
 let colour = randomColor();
 
 let reverseColour = () => {
   let tempColour = colour.slice();
   let reversedColour = tempColour[0];
-  for (let i = 6; i > 0 ; i--) {
+  for (let i = 6; i > 0; i--) {
     reversedColour += tempColour[i];
-  } 
-    return reversedColour;
-}
+  }
+  return reversedColour;
+};
 
 let backColour = reverseColour();
 
 const JSX = (
-  <div style={{background: colour }}>
-    <h1 style={{color: backColour }}>Hello World</h1>
+  <div style={{ background: colour }}>
+    <h1 style={{ color: backColour }}>Hello World</h1>
   </div>
 );
 
-ReactDOM.render(<Input />, document.getElementById('editor'));
-ReactDOM.render(JSX, document.getElementById('test'));
+ReactDOM.render(<Input />, document.getElementById("editor"));
+
+ReactDOM.render(JSX, document.getElementById("test"));
