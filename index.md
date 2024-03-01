@@ -17,10 +17,7 @@
 
 <body>
 
-<div>
-  <textarea id="editor"></textarea>
-</div>
-
+<div id="editor"></div>
 <div id="preview"></div>
 
 
