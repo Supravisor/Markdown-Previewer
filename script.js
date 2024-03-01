@@ -1,4 +1,4 @@
-
+// React component
 class Input extends React.Component {
   constructor(props) {
     super(props);
