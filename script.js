@@ -1,46 +1,48 @@
 import ReactDOM from "https://esm.sh/react-dom";
 
+let marked = "marked";
+
 class Input extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      markdown: ""
-    };
+      markdown: "" };
+
     // Change code below this line
-    
+
     // Change code above this line
   }
-  
+
   // Change code below this line
   updateMarkdown(markdown) {
-    this.setState({markdown});
+    this.setState({ markdown });
   }
 
   // Change code above this line
   render() {
-    return (
-      <div>
-        <textarea
-          value={this.state.markdown}
-          onChange={(e) => { this.updateMarkdown(e.target.value);
-          }}
-        >
-          {console.log(this.state.markdown)}
-        </textarea>
-        <div dangerouslySetInnerHTML = {{ __html: (this.state.markdown) }}>
-        </div>
-        <Output  />
-      </div>
-    );
-  }
-}
+    return /*#__PURE__*/(
+      React.createElement("div", null, /*#__PURE__*/
+      React.createElement("textarea", {
+        value: this.state.markdown,
+        onChange: e => {this.updateMarkdown(e.target.value);
+        } },
 
-const Output = (props) => (
-  <div>
-    <h4>Controlled Input:</h4>
-    <div>{props.output}</div>
-  </div>
-);
+      console.log(this.state.markdown)), /*#__PURE__*/
+
+      React.createElement("div", { dangerouslySetInnerHTML: { __html: this.state.markdown } }), /*#__PURE__*/
+
+      React.createElement(Output, null)));
+
+
+  }}
+
+
+const Output = (props) => /*#__PURE__*/
+React.createElement("div", null, /*#__PURE__*/
+React.createElement("h4", null, "Controlled Input:"), /*#__PURE__*/
+React.createElement("div", null, props.output));
+
+
 
 const randomColor = () => {
   const hexadecimalNumbers = "0123456789ABCDEF";
@@ -64,12 +66,12 @@ let reverseColour = () => {
 
 let backColour = reverseColour();
 
-const JSX = (
-  <div style={{ background: colour }}>
-    <h1 style={{ color: backColour }}>Hello World</h1>
-  </div>
-);
+const JSX = /*#__PURE__*/
+React.createElement("div", { style: { background: colour } }, /*#__PURE__*/
+React.createElement("h1", { style: { color: backColour } }, "Hello World"));
 
-ReactDOM.render(<Input />, document.getElementById("editor"));
+
+
+ReactDOM.render( /*#__PURE__*/React.createElement(Input, null), document.getElementById("editor"));
 
 ReactDOM.render(JSX, document.getElementById("test"));
