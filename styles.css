@@ -1,19 +1,32 @@
 body {
   background: Crimson;
-  margin-left: 26vw;
+  margin-left: 330px;
+}
+
+h1 {
+  font-family: Corbel;  
 }
 
 #editor {
-  background: Grey;
+  background: SlateGrey;
   padding: 0px;
 }
 
 #preview {
-  background: Coral;
+  background: white;
+}
+
+.container {
+  display: flex;
+  gap: 1fr;
+  width: 100%;
 }
 
 #preview, #editor {
-  display: inline-block;
+  display: unset;
   height: 60vh;
-  width: 40%;
+  width: 50%;
+  margin: 10px;
+  
+  padding-left: 5px;
 }
