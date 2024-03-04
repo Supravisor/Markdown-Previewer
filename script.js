@@ -22,7 +22,8 @@ class Input extends React.Component {
   render() {
     return /*#__PURE__*/(
       React.createElement("div", null, /*#__PURE__*/
-      React.createElement("textarea", {
+      React.createElement("textarea", { 
+        id: "editor",
         value: this.state.markdown,
         onChange: e => {this.updateMarkdown(e.target.value);
         } },
@@ -38,8 +39,8 @@ class Input extends React.Component {
 
 
 const Output = (props) => /*#__PURE__*/
-React.createElement("div", null, /*#__PURE__*/
-React.createElement("h4", null, "Controlled Input:"), /*#__PURE__*/
+React.createElement("div", { id: "preview" }, /*#__PURE__*/
+
 React.createElement("div", null, props.output));
 
 
@@ -72,6 +73,6 @@ React.createElement("h1", { style: { color: backColour } }, "Hello World"));
 
 
 
-ReactDOM.render( /*#__PURE__*/React.createElement(Input, null), document.getElementById("editor"));
+ReactDOM.render( /*#__PURE__*/React.createElement(Input, null), document.getElementById("markdown"));
 
 ReactDOM.render(JSX, document.getElementById("test"));

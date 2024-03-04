@@ -3,7 +3,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Markdown Previewer</title>
+  <title>Markdown Previewer</title>
 <style>
 body {
   background: Crimson;
@@ -37,8 +37,8 @@ textarea {
 </head>
 <body>
 
-  <div id="editor"></div>
-  <div id="preview"></div>
+  <div id="markdown"></div>
+  
 
 <div id="test"></div>
 
