@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <title>Markdown Previewer</title>
 
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./styles.css">
 
 </head>
 <body>
