@@ -1,7 +1,5 @@
 import ReactDOM from "https://esm.sh/react-dom";
 
-let marked = "marked";
-
 class Input extends React.Component {
   constructor(props) {
     super(props);
@@ -37,4 +35,4 @@ React.createElement("div", null, /*#__PURE__*/
 React.createElement("div", null, props.output));
 
 
-ReactDOM.render( /*#__PURE__*/React.createElement(Input, null), document.getElementById("markdown"));
+ReactDOM.render( /*#__PURE__*/React.createElement(Input, null), document.getElementById("markup"));
