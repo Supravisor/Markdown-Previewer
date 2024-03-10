@@ -4,7 +4,6 @@ body {
 
 h1, h2 {
   font-family: Corbel;
-  text-decoration: none;
 }
 
 #editor {
@@ -28,4 +27,5 @@ h1, h2 {
   width: 50%;
   margin: 10px;  
   padding-left: 5px;
+  text-decoration: none;
 }
