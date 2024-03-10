@@ -4,7 +4,8 @@ body {
 }
 
 h1 {
-  font-family: Corbel;  
+  font-family: Corbel;
+  text-decoration: none;
 }
 
 #editor {
